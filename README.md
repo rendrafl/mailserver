@@ -1,2 +1,2 @@
-# mailserver
+# Mailserver
 Assignment Online-DNET
