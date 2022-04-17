@@ -18,7 +18,6 @@ Assignment Online-DNET
 ##setup mail
 
 - vim /etc/dovecot/dovecot.conf -> add (protocols = imap imaps pop3 pop3s) -> systemctl restart dovecot
-
 - cd /etc/dovecot/conf.d
 - vim 10-mail.conf
 - remark mail_location = maildir:~/Maildir
@@ -46,17 +45,17 @@ Assignment Online-DNET
 - vim muttrc
 
 ##muttrc config
-set imap_user = "felani"
-set imap_pass = "felani"
-set folder = imaps://domainsaya.com
-set spoolfile = +INBOX
-set realname =  'Felani fl'
-set from = "$imap_user"
-set use_from = yes
-mailboxes INBOX
-set sidebar_visible = yes
-set timeout=1
-set sort=reverse-date
+- set imap_user = "felani"
+- set imap_pass = "felani"
+- set folder = imaps://domainsaya.com
+- set spoolfile = +INBOX
+- set realname =  'Felani fl'
+- set from = "$imap_user"
+- set use_from = yes
+- mailboxes INBOX
+- set sidebar_visible = yes
+- set timeout=1
+- set sort=reverse-date
 
 ##check muttfile
 - su - felani
