@@ -2,20 +2,20 @@
 Assignment Online-DNET
 
 
-##install postfix
+## install postfix
 - apt install postfix -> internet site -> domainsaya.com
 - systemctl status postfix -> (active)
 
-##configure postfix
+## configure postfix
 - postconf "home_mailbox = Maildir/"
 - postconf -n
 
-##install dovecot
+## install dovecot
 - apt install dovecot-imapd dovecot-pop3d dovecot-core
 - systemctl status dovecot (active & enabled)
 - systemctl reload postfix (status reloaded active)
 
-##setup mail
+## setup mail
 
 - vim /etc/dovecot/dovecot.conf -> add (protocols = imap imaps pop3 pop3s) -> systemctl restart dovecot
 - cd /etc/dovecot/conf.d
@@ -32,19 +32,19 @@ Assignment Online-DNET
 - mkdir Maildir/cur Maildir/new Maildir/tmp
 - chmod 700 -R Maildir/
 
-##add user
+## add user
 - adduser --gecos "" rendra
 - adduser --gecos "" felani
 
-##checkdir
+## checkdir
 - su - rendra -> logout
 
-##config mutt
+## config mutt
 - apt install mutt
 - cd .mutt/
 - vim muttrc
 
-##muttrc config
+## muttrc config
 - set imap_user = "felani"
 - set imap_pass = "felani"
 - set folder = imaps://domainsaya.com
@@ -55,21 +55,21 @@ Assignment Online-DNET
 - mailboxes INBOX
 - set sidebar_visible = yes
 - set timeout=1
-- set sort=reverse-date
+-   set sort=reverse-date
 
-##check muttfile
+## check muttfile
 - su - felani
 - ssh felani@domainsaya.com
 - mutt
 - accept certificate
 
-##mutt user felani
+## mutt user felani
 - vim .mutt/muttrc
 - set imap_user = "felani"
 - set imap_pass = "felani"
 - set_realname = 'Felani fl'
 
-##mutt user rendra
+## mutt user rendra
 - vim .mutt/muttrc
 - set imap_user = "rendra"
 - set imap_pass = "rendra"
